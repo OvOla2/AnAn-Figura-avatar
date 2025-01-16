@@ -1,11 +1,20 @@
-# AnAn-Figura-avatar 
-The avatars for Figura, a skin mod for Minecraft Java Edition, are imitations of characters who are the mascots of the Anthon Open Source Community.
+An-An: Minecraft Avatar (Figura)
+===
 
-AnAn is the mascot of the Anthon Open Source Community(AOSC).For more details,please refer to https://aosc.io/mascot 
+[简体中文自述文件 >>](README.zh-cn.md)
 
-Using jimmyanims.lua,For more details,please refer to https://github.com/JimmyHelp/JimmyAnims 
+![Yay, it's An-An!](preview.png)
 
-## About animation 
-basemodel:without animation
+Minecraft avatar imitating An-An, mascot of Anthon Open Source Community.
 
-fullmodel:with animation
+For more information on An-An and Tong-Tong, her companion, please refer to AOSC's page on [community mascots](https://aosc.io/mascot).
+
+Requirements
+---
+
+As this avatar is built for [Figura](https://figuramc.org/), you would need to install it in Minecraft.
+
+Animated Variant
+---
+
+An animated version is currently under construction, making use of [JimmyAnims](JimmyAnims).
