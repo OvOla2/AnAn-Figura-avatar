@@ -18,5 +18,7 @@
 ---
 
 目前，基础模型已制作完成，可以在releases下载不包含任何效果的基础模型（后缀为basemodel）
+
 带有动作动画的角色模型正在制作中。后续发布（后缀为fullmodel）
+
 使用[JimmyAnims](https://github.com/JimmyHelp/JimmyAnims) 实现动画效果导入，以后可能会使用更多第三方luaapi实现动画
