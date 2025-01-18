@@ -12,7 +12,7 @@
 依赖
 ---
 
-本角色模型是基于 [Figura](https://figuramc.org/) 制作的，需安装该模组 (mod) 才能使用安安的角色模型。
+本角色模型是基于 [Figura](https://figuramc.org/) 制作的，需安装该模组 (mod) 才能使用安安的角色模型，使用可以参考[How to use](https://github.com/Gakuto1112/FiguraBlueArchiveCharacters/blob/base/.github/README.md#how-to-use)
 
 关于动作动画及其它效果
 ---
