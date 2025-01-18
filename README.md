@@ -12,7 +12,7 @@ For more information on An-An and Tong-Tong, her companion, please refer to AOSC
 Requirements
 ---
 
-As this avatar is built for [Figura](https://figuramc.org/), you would need to install it in Minecraft.
+As this avatar is built for [Figura](https://figuramc.org/), you would need to install it in Minecraft.You can refer to [How to use](https://github.com/Gakuto1112/FiguraBlueArchiveCharacters/blob/base/.github/README.md#how-to-use)
 
 About Action Animations and Other Effects
 ---
