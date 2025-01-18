@@ -12,9 +12,11 @@
 依赖
 ---
 
-本角色模型是为 [Figura](https://figuramc.org/) 制作的，需安装该模组 (mod) 才能使用安安的角色模型。
+本角色模型是基于 [Figura](https://figuramc.org/) 制作的，需安装该模组 (mod) 才能使用安安的角色模型。
 
-动作动画
+关于动作动画及其它效果
 ---
 
-带有动作动画的角色模型正在基于 [JimmyAnims](JimmyAnims) 制作中。
+目前，基础模型已制作完成，可以在releases下载不包含任何效果的基础模型（后缀为basemodel）
+带有动作动画的角色模型正在制作中。后续发布（后缀为fullmodel）
+使用[JimmyAnims](JimmyAnims) 实现动画效果导入
