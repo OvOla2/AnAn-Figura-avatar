@@ -21,4 +21,4 @@
 
 带有动作动画的角色模型正在制作中。后续发布（后缀为fullmodel）
 
-使用[JimmyAnims](https://github.com/JimmyHelp/JimmyAnims) 实现动画效果导入，以后可能会使用更多第三方luaapi实现动画
+使用[JimmyAnims](https://github.com/JimmyHelp/JimmyAnims)，[figura-physbone-api](https://github.com/ChloeSpacedOut/figura-physbone-api)实现动画效果导入，以后可能会使用更多第三方luaapi实现动画
