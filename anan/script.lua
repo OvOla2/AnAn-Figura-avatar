@@ -35,6 +35,24 @@ local action = mainPage:newAction()
     :item("minecraft:oak_stairs")
     :hoverColor(1, 0, 1)
     :onLeftClick(pings.actionClicked)
+---------------------------------------
+local mount = require("EZMount")
+
+local minecart = animations.minecart
+
+local minecartList = {
+	["still"] = minecart.still,
+	["forward"] = minecart.forward,
+	["backward"] = minecart.backward,
+	["turnright"] = minecart.turnright,
+	["turnleft"] = minecart.turnleft,
+	["up"] = minecart.up,
+	["down"] = minecart.down,
+	["rear"] = minecart.rear,
+}
 
 
+
+--mount:newLivingMount("mule",models.horse,headcubes,saddlecubes,bagcubes,armorcubes,armortex,animlist)
+mount:newObjectMount("minecart",models.minecart,passengercubes,minecartList)
 
