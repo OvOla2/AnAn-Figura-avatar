@@ -21,5 +21,5 @@ The base model has been completed and is available for download in the releases 
 
 Character models with action animations are currently in production and will be released subsequently (suffix: fullmodel).
 
-Implement animation effects making use of [JimmyAnims](https://github.com/JimmyHelp/JimmyAnims) and [figura-physbone-api](https://github.com/ChloeSpacedOut/figura-physbone-api).In the future, more third-party Lua APIs may be utilized to achieve animations.
+Implement animation effects making use of [JimmyAnims](https://github.com/JimmyHelp/JimmyAnims) ,[EZMount](https://github.com/JimmyHelp/EZMount) , [figura-physbone-api](https://github.com/ChloeSpacedOut/figura-physbone-api) and [figura-eye-tracking-API](https://github.com/OvOla2/Figura-eye-tracking-API). In the future, more third-party Lua APIs may be utilized to achieve animations.
 
