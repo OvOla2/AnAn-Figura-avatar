@@ -1,9 +1,9 @@
 -- Auto generated script file --
 
---hide vanilla model
+-- hide vanilla model
 vanilla_model.PLAYER:setVisible(false)
 
---hide vanilla armor model
+-- hide vanilla armor model
 vanilla_model.ARMOR:setVisible(false)
 
 local anims = require("EZAnims")
@@ -56,12 +56,12 @@ local minecartList = {
 
 
 
---mount:newLivingMount("mule",models.horse,headcubes,saddlecubes,bagcubes,armorcubes,armortex,animlist)
+-- mount:newLivingMount("mule",models.horse,headcubes,saddlecubes,bagcubes,armorcubes,armortex,animlist)
 mount:newObjectMount("minecart",models.minecart,passengercubes,minecartList)
 
 ---------------------------------------------------
 -- 引入眼球追踪API模块
-local eyeTracking = require("eye_tracking_api")
+local eyeTracking = require("eye-tracking-api")
 
 -- 自定义配置参数（覆盖默认值）
 eyeTracking.init({
@@ -78,6 +78,12 @@ eyeTracking.init({
 })
 
 
+-----------------------------------------------------
+local sitting = require("SittingAPI") -- 引入API
+-- 初始化（只需一次）
+function events.TICK()
+    sitting.init()
+end
 
-
-
+-----------------------------------------------------
+local WetClass = require("Wet-control")
