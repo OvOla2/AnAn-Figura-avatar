@@ -10,7 +10,7 @@ local anims = require("EZAnims")
 local example = anims:addBBModel(animations.model)
 anims:setFallVel(-1)
 anims:setOneJump(true)
-
+---------------------------------------
 physBone = require('physBoneAPI')
 
 function events.entity_init()
@@ -87,3 +87,6 @@ end
 
 -----------------------------------------------------
 local WetClass = require("Wet-control")
+
+-----------------------------------------------------
+local ChatBubble = require("chatbubble")
