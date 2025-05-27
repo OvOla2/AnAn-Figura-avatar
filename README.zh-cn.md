@@ -21,4 +21,4 @@
 
 带有动作动画的角色模型已制作。（后缀为fullmodel）
 
-使用[JimmyAnims](https://github.com/JimmyHelp/JimmyAnims) ,[EZMount](https://github.com/JimmyHelp/EZMount) , [Figura-chatbubble-multiplayer](https://github.com/OvOla2/Figura-chatbubble-multiplayer) , [figura-physbone-api](https://github.com/ChloeSpacedOut/figura-physbone-api) and [figura-eye-tracking-API](https://github.com/OvOla2/Figura-eye-tracking-API)实现动画效果导入，以后可能会使用更多第三方luaapi实现动画及其它效果
+使用[JimmyAnims](https://github.com/JimmyHelp/JimmyAnims) ,[EZMount](https://github.com/JimmyHelp/EZMount) , [Figura-chatbubble-multiplayer](https://github.com/OvOla2/Figura-chatbubble-multiplayer) , [figura-physbone-api](https://github.com/ChloeSpacedOut/figura-physbone-api) 和 [figura-eye-tracking-API](https://github.com/OvOla2/Figura-eye-tracking-API)实现动画效果导入，以后可能会使用更多第三方luaapi实现动画及其它效果
