@@ -1,25 +1,14 @@
----- SittingAPI.lua
+---- SittingAPI.lua ----
 ---- [OVERRIDE NOTICE] 该脚本基于CatMaid项目中sit_down.lua二次开发
 ---- Original Author: Gakuto1112
----- Source: https://github.com/Gakuto1112/CatMaid
 ---- License: MIT
 
----@class SittingAPI 坐立控制API（Ping同步版）
+---@class SittingAPI 坐立控制API
 SittingAPI = {
     isSitting = false,
-    _initialized = false
+    _initialized = false,
+    _isSynced = false
 }
-
--- 定义Ping函数
-function pings.syncSitState(state)
-    if state then
-        animations.model.sit_down:play()
-        animations.model.stand_up:stop()
-    else
-        animations.model.stand_up:play()
-        animations.model.sit_down:stop()
-    end
-end
 
 --- 初始化API
 function SittingAPI.init()
@@ -44,9 +33,9 @@ function SittingAPI.init()
         end
     end)
 
-     -- 检测移动自动站立
+    -- 检测移动自动站立
     events.TICK:register(function()
-        if SittingAPI.isSitting and player:isMoving(true) then  -- 检测到移动时强制站立
+        if SittingAPI.isSitting and player:isMoving(true) then
             SittingAPI.standUp()
         end
     end)
@@ -54,35 +43,67 @@ function SittingAPI.init()
     SittingAPI._initialized = true
 end
 
+-- Ping同步函数
+function pings.syncSitState(state)
+    if not SittingAPI._isSynced then
+        SittingAPI._isSynced = true
+        SittingAPI.isSitting = state
+
+        -- 仅控制动画
+        if state then
+            animations.model.sit_down:play()
+            animations.model.stand_up:stop()
+        else
+            animations.model.stand_up:play()
+            animations.model.sit_down:stop()
+        end
+
+        SittingAPI._isSynced = false
+    end
+end
+
 --- 检查坐下条件
 function SittingAPI.canSit()
-    return player and
-        player:getPose() == "STANDING" and
-        player:isOnGround() and
-        not player:getVehicle() and
-        not player:isMoving(true)
+	if player then
+		return player:getPose() == "STANDING" and
+		player:isOnGround() and
+		not player:getVehicle() and
+		not player:isMoving(true)
+	else
+		return false
+	end
 end
 
---- 执行坐下（带Ping同步）
+--- 执行坐下
 function SittingAPI.sitDown()
-    -- 本地动画控制
-    animations.model.sit_down:play()
-    animations.model.stand_up:stop()
+    if not SittingAPI.canSit() then return end
+
+    -- 更新本地状态
     SittingAPI.isSitting = true
 
-    -- 发送Ping（使用1字节布尔值）
-    pings.syncSitState(true) -- 占用总字节：1(type) + 0(bool) = 1 byte
+    -- 播放本地动画
+    animations.model.sit_down:play()
+    animations.model.stand_up:stop()
+
+    -- 网络同步
+    if not SittingAPI._isSynced then
+        pings.syncSitState(true)
+    end
 end
 
---- 执行站立（带Ping同步）
+--- 执行站立
 function SittingAPI.standUp()
-    -- 本地动画控制
-    animations.model.stand_up:play()
-    animations.model.sit_down:stop()
+    -- 更新本地状态
     SittingAPI.isSitting = false
 
-    -- 发送Ping
-    pings.syncSitState(false) -- 1(type) + 0(bool) = 1 byte
+    -- 播放本地动画
+    animations.model.stand_up:play()
+    animations.model.sit_down:stop()
+
+    -- 网络同步
+    if not SittingAPI._isSynced then
+        pings.syncSitState(false)
+    end
 end
 
 --- 获取当前状态
