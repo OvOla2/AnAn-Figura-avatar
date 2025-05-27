@@ -19,6 +19,6 @@
 
 目前，基础模型已制作完成，可以在releases下载不包含任何效果的基础模型（后缀为basemodel）
 
-带有动作动画的角色模型正在制作中。后续发布（后缀为fullmodel）
+带有动作动画的角色模型已制作。（后缀为fullmodel）
 
-使用[JimmyAnims](https://github.com/JimmyHelp/JimmyAnims)，[figura-physbone-api](https://github.com/ChloeSpacedOut/figura-physbone-api)实现动画效果导入，以后可能会使用更多第三方luaapi实现动画
+使用[JimmyAnims](https://github.com/JimmyHelp/JimmyAnims) ,[EZMount](https://github.com/JimmyHelp/EZMount) , [Figura-chatbubble-multiplayer](https://github.com/OvOla2/Figura-chatbubble-multiplayer) , [figura-physbone-api](https://github.com/ChloeSpacedOut/figura-physbone-api) and [figura-eye-tracking-API](https://github.com/OvOla2/Figura-eye-tracking-API)实现动画效果导入，以后可能会使用更多第三方luaapi实现动画及其它效果
