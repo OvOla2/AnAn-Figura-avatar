@@ -26,14 +26,14 @@ local mainPage = action_wheel:newPage()
 action_wheel:setPage(mainPage)
 
 function pings.actionClicked()
-    animations.model.sit_down:play()
+    animations.model.yeeeee:play()
     -- animation example (commented out to avoid erroring):
     -- animations.bbmodelname.animationname:play()
 end
 
 local action = mainPage:newAction()
-    :title("sit")
-    :item("minecraft:oak_stairs")
+    :title("yeeeee")
+    :item("minecraft:oak_log")
     :hoverColor(1, 0, 1)
     :onLeftClick(pings.actionClicked)
 
