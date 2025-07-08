@@ -66,8 +66,8 @@ local eyeTracking = require("eye-tracking-api")
 -- 自定义配置参数（覆盖默认值）
 eyeTracking.init({
     -- [!] 必须根据实际模型层级结构填写路径
-    left_eye_path = "model.root.Torso.Head.Eyes.lefteye.leftpupil", -- 左眼瞳孔部件的完整路径（点分隔层级）
-    right_eye_path = "model.root.Torso.Head.Eyes.righteye.rightpupil", -- 右眼瞳孔部件的完整路径
+    left_eye_path = "model.root.Torso.Head.Face.Eyes.lefteye.leftpupil", -- 左眼瞳孔部件的完整路径（点分隔层级）
+    right_eye_path = "model.root.Torso.Head.Face.Eyes.righteye.rightpupil", -- 右眼瞳孔部件的完整路径
     head_part = "Head", -- 头部模型部件的名称（需与model文件中的部件名一致）
 
     -- [!] 参数调节区
@@ -90,3 +90,5 @@ local WetClass = require("Wet-control")
 
 -----------------------------------------------------
 local ChatBubble = require("chatbubble")
+-----------------------------------------------------
+local BugScareClass = require("bug_scare")

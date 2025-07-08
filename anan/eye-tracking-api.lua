@@ -4,13 +4,13 @@ local M = {} -- 模块主表
 -- ======================= 默认配置 =======================
 local config = {
     -- [!] 默认模型路径（当主脚本不提供配置时使用）
-    left_eye_path = "model.root.Torso.Head.Eyes.lefteye.leftpupil",
-    right_eye_path = "model.root.Torso.Head.Eyes.righteye.rightpupil",
+    left_eye_path = "model.root.Torso.Head.Face.Eyes.lefteye.leftpupil",
+    right_eye_path = "model.root.Torso.Head.Face.Eyes.righteye.rightpupil",
     head_part = "Head", -- 默认头部部件名称
 
     -- [!] 默认行为参数
     max_offset = 0.5, -- 默认瞳孔最大偏移
-    sensitivity = 35, -- 默认灵敏度
+    sensitivity = 20, -- 默认灵敏度
     update_interval = 2, -- 默认更新间隔
     debug_mode = false -- 默认关闭调试
 }
